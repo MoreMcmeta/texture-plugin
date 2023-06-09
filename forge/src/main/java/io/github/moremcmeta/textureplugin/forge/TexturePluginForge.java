@@ -29,7 +29,7 @@ import io.github.moremcmeta.textureplugin.ModConstants;
  */
 @SuppressWarnings("unused")
 @MoreMcmetaClientPlugin
-public class TexturePluginForge implements MoreMcmetaTexturePlugin {
+public final class TexturePluginForge implements MoreMcmetaTexturePlugin {
     @Override
     public String sectionName() {
         return ModConstants.SECTION_NAME;

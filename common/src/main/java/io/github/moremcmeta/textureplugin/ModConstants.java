@@ -25,7 +25,7 @@ import io.github.moremcmeta.moremcmeta.api.client.texture.TextureComponent;
  * Constants for both Fabric and Forge implementations of the plugin.
  * @author soir20
  */
-public class ModConstants {
+public final class ModConstants {
     public static final String MOD_ID = "moremcmeta_texture_plugin";
     public static final String SECTION_NAME = "texture";
     public static final MetadataAnalyzer ANALYZER = new TextureMetadataAnalyzer();

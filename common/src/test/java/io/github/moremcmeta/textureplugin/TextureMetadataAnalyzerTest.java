@@ -30,7 +30,7 @@ import static org.junit.Assert.*;
  * Tests the {@link TextureMetadataAnalyzer}.
  * @author soir20
  */
-public class TextureMetadataAnalyzerTest {
+public final class TextureMetadataAnalyzerTest {
     private static final MetadataAnalyzer ANALYZER = new TextureMetadataAnalyzer();
 
     @Test

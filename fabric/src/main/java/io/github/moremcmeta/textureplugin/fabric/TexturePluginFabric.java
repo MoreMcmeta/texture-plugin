@@ -27,7 +27,7 @@ import io.github.moremcmeta.textureplugin.ModConstants;
  * @author soir20
  */
 @SuppressWarnings("unused")
-public class TexturePluginFabric implements MoreMcmetaTexturePlugin {
+public final class TexturePluginFabric implements MoreMcmetaTexturePlugin {
     @Override
     public String sectionName() {
         return ModConstants.SECTION_NAME;

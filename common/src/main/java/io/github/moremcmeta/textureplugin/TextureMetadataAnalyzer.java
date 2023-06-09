@@ -27,7 +27,7 @@ import java.util.Optional;
  * Reads blur and clamp information from the given metadata.
  * @author soir20
  */
-public class TextureMetadataAnalyzer implements MetadataAnalyzer {
+public final class TextureMetadataAnalyzer implements MetadataAnalyzer {
     @Override
     public AnalyzedMetadata analyze(MetadataView metadata, int imageWidth, int imageHeight) {
         return new AnalyzedMetadata() {
