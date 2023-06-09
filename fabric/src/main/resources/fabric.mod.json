@@ -1,26 +1,24 @@
 {
   "schemaVersion": 1,
-  "id": "myplugin",
+  "id": "moremcmeta_texture_plugin",
   "version": "${modVersion}",
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "MoreMcmeta Texture Plugin",
+  "description": "Default plugin for MoreMcmeta that loads blur and clamp texture settings.",
   "authors": [
-    "AUTHOR_NAME"
+    "soir20"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/MoreMcmeta",
+    "sources": "https://github.com/MoreMcmeta/texture-plugin"
   },
-  "license": "Insert License Here",
-  "icon": "assets/examplemod/icon.png",
+  "license": "LGPL-3.0",
   "environment": "*",
   "entrypoints": {
-    "client": [
-      "io.github.myorg.myplugin.fabric.ExampleModFabric"
+    "moremcmeta-client": [
+      "io.github.moremcmeta.textureplugin.fabric.TexturePluginFabric"
     ]
   },
   "depends": {
-    "fabric": "*",
     "minecraft": ">=${minecraftVersion}",
     "moremcmeta": "${minMoreMcmetaVersion}"
   }
