@@ -17,25 +17,25 @@ public class TextureMetadataAnalyzerTest {
     private static final MetadataAnalyzer ANALYZER = new TextureMetadataAnalyzer();
 
     @Test
-    public void analyze_MissingBlur_DefaultsFalse() throws InvalidMetadataException {
+    public void analyze_MissingBlur_DefaultsEmpty() throws InvalidMetadataException {
         MetadataView metadata = new MockMetadataView(ImmutableMap.of(
                 "clamp", true
         ));
 
         AnalyzedMetadata result = ANALYZER.analyze(metadata, 100, 100);
 
-        assertFalse(result.blur().orElseThrow());
+        assertFalse(result.blur().isPresent());
     }
 
     @Test
-    public void analyze_MissingClamp_DefaultsFalse() throws InvalidMetadataException {
+    public void analyze_MissingClamp_DefaultsEmpty() throws InvalidMetadataException {
         MetadataView metadata = new MockMetadataView(ImmutableMap.of(
                 "blur", true
         ));
 
         AnalyzedMetadata result = ANALYZER.analyze(metadata, 100, 100);
 
-        assertFalse(result.clamp().orElseThrow());
+        assertFalse(result.clamp().isPresent());
     }
 
     @Test

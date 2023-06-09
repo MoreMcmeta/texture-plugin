@@ -16,12 +16,12 @@ public class TextureMetadataAnalyzer implements MetadataAnalyzer {
         return new AnalyzedMetadata() {
             @Override
             public Optional<Boolean> blur() {
-                return Optional.of(metadata.booleanValue("blur").orElse(false));
+                return metadata.booleanValue("blur");
             }
 
             @Override
             public Optional<Boolean> clamp() {
-                return Optional.of(metadata.booleanValue("clamp").orElse(false));
+                return metadata.booleanValue("clamp");
             }
         };
     }
