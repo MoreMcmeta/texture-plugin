@@ -30,6 +30,7 @@ import static org.junit.Assert.*;
  * Tests the {@link TextureMetadataAnalyzer}.
  * @author soir20
  */
+@SuppressWarnings("OptionalGetWithoutIsPresent")
 public final class TextureMetadataAnalyzerTest {
     private static final MetadataAnalyzer ANALYZER = new TextureMetadataAnalyzer();
 
@@ -64,7 +65,7 @@ public final class TextureMetadataAnalyzerTest {
 
         AnalyzedMetadata result = ANALYZER.analyze(metadata, 100, 100);
 
-        assertTrue(result.blur().orElseThrow());
+        assertTrue(result.blur().get());
     }
 
     @Test
@@ -76,7 +77,7 @@ public final class TextureMetadataAnalyzerTest {
 
         AnalyzedMetadata result = ANALYZER.analyze(metadata, 100, 100);
 
-        assertTrue(result.clamp().orElseThrow());
+        assertTrue(result.clamp().get());
     }
 
     @Test
@@ -88,7 +89,7 @@ public final class TextureMetadataAnalyzerTest {
 
         AnalyzedMetadata result = ANALYZER.analyze(metadata, 100, 100);
 
-        assertFalse(result.blur().orElseThrow());
+        assertFalse(result.blur().get());
     }
 
     @Test
@@ -100,7 +101,7 @@ public final class TextureMetadataAnalyzerTest {
 
         AnalyzedMetadata result = ANALYZER.analyze(metadata, 100, 100);
 
-        assertFalse(result.clamp().orElseThrow());
+        assertFalse(result.clamp().get());
     }
 
 }
