@@ -10,6 +10,7 @@ authors = "soir20"
 description = '''
 Default plugin for MoreMcmeta that loads blur and clamp texture settings.
 '''
+logoFile="moremcmeta-logo-gradient.png"
 
 [[dependencies.moremcmeta_texture_plugin]]
 modId = "moremcmeta"
